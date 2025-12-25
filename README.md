@@ -96,6 +96,11 @@ Application will be available at:
 http://127.0.0.1:8000
 ```
 
+## 🏛️ Architecture Diagram
+
+![IMG_20251225_231140218_HDR~2](https://github.com/user-attachments/assets/0e736bee-93a8-485e-bde5-6895f0759fdb)
+
+
 ## 🔌 API Endpoints
 
 | Method | Endpoint | Description |
