@@ -21,19 +21,19 @@ The application demonstrates:
 - Postman (for API testing)
 
 ---
-
 ## 📂 Project Structure
 
+```text
 beyondchats-blog-api/
 ├── app/
 ├── bootstrap/
 ├── config/
 ├── database/
 ├── routes/
-│ ├── api.php
-│ └── web.php
+│   ├── api.php
+│   └── web.php
 ├── scraper/
-│ └── scrape.php
+│   └── scrape.php
 ├── storage/
 ├── tests/
 ├── vendor/
@@ -43,19 +43,60 @@ beyondchats-blog-api/
 ├── composer.lock
 └── artisan
 
+```
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Clone the Repository
+1️⃣ Clone the Repository
 ```bash
 git clone <your-repository-url>
 cd beyondchats-blog-api
-
-### Install Dependencies
-
+```
+2️⃣ Install Dependencies
+```bash
 composer install
-
-## Environment Configuration
+```
+3️⃣ Environment Configuration
+```bash
 cp .env.example .env
+```
+
+## Update database credentials in .env:
+```text
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3307
+DB_DATABASE=beyondchats
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Adjust DB_PORT, username, or password based on your local MySQL setup.
+
+4️⃣ Generate Application Key
+```bash
+php artisan key:generate
+```
+
+5️⃣ Run Database Migrations
+```bash
+php artisan migrate
+```
+
+6️⃣ Scrape BeyondChats Blog Articles
+```bash
+php scraper/scrape.php
+```
+
+7️⃣ Start the Laravel Server
+```bash
+php artisan serve
+```
+
+Application will be available at:
+```text
+http://127.0.0.1:8000
+
+```
