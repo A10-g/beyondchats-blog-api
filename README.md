@@ -38,10 +38,6 @@ beyondchats-blog-api/
 ├── tests/
 ├── vendor/
 ├── README.md
-├── .env.example
-├── composer.json
-├── composer.lock
-└── artisan
 
 ```
 
