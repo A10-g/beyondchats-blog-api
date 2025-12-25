@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "beyondchats-blog-api-collection",
+    "name": "BeyondChats Blog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "CRUD APIs for BeyondChats scraped blog articles"
+  },
+  "item": [
+    {
+      "name": "Get All Articles",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/articles",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "articles"]
+        }
+      }
+    },
+    {
+      "name": "Get Article By ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/articles/1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "articles", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create Article",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Sample Article\",\n  \"content\": \"Sample content\",\n  \"url\": \"https://example.com\",\n  \"published_at\": \"2024-01-01\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/articles",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "articles"]
+        }
+      }
+    },
+    {
+      "name": "Update Article (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Article\",\n  \"content\": \"Updated content\",\n  \"url\": \"https://example.com/updated\",\n  \"published_at\": \"2024-01-05\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/articles/1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "articles", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Article (PATCH)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Partially Updated Title\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/articles/1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "articles", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Article",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/articles/1",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "8000",
+          "path": ["api", "articles", "1"]
+        }
+      }
+    }
+  ]
+}
