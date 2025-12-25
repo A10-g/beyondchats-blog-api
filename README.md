@@ -98,5 +98,28 @@ php artisan serve
 Application will be available at:
 ```text
 http://127.0.0.1:8000
+```
 
+## 🔌 API Endpoints
+
+| Method | Endpoint | Description |
+|-------|----------|-------------|
+| GET | `/api/articles` | Fetch all articles |
+| GET | `/api/articles/{id}` | Fetch article by ID |
+| POST | `/api/articles` | Create a new article |
+| PUT | `/api/articles/{id}` | Update article |
+| PATCH | `/api/articles/{id}` | Partial update |
+| DELETE | `/api/articles/{id}` | Delete article |
+
+## 🧪 API Testing (Postman)
+```bash
+BeyondChats-Blog-API.postman_collection.json
+```
+
+**Steps:**
+```text
+1. Open Postman
+2. Click Import
+3. Select the collection file
+4. Run the requests in order
 ```
